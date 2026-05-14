@@ -26,7 +26,7 @@ export default function PedagogyPreview() {
           </Button>
         </div>
         <div className="relative mx-auto aspect-square w-full max-w-[340px] overflow-hidden rounded-full bg-[#FFF8EF]">
-          <Image src="/images/painting.jpg" alt="Kinder malen im Kreativbereich" fill className="object-cover" sizes="340px" />
+          <Image src="/Kindergarten-web/images/painting.jpg" alt="Kinder malen im Kreativbereich" fill className="object-cover" sizes="340px" />
         </div>
       </div>
     </div>

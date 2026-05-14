@@ -1,4 +1,5 @@
 import { ArrowRight, Heart, Send, UsersRound } from "lucide-react";
+import Image from "next/image";
 import Button from "@/components/Button";
 
 const steps = [
@@ -29,7 +30,9 @@ export default function AnmeldungSteps() {
         })}
       </div>
       <div className="rounded-[28px] bg-white p-6 shadow-[0_10px_30px_rgba(0,0,0,0.06)]">
-        <div className="mb-6 aspect-[4/3] rounded-[24px] bg-[url('/images/backpack-child.jpg')] bg-cover bg-center" />
+        <div className="relative mb-6 aspect-[4/3] overflow-hidden rounded-[24px]">
+          <Image src="/Kindergarten-web/images/backpack-child.jpg" alt="Kind mit Rucksack in der Kita" fill className="object-cover" sizes="320px" />
+        </div>
         <Button href="/anmeldung" className="w-full">
           Jetzt Platz anfragen <ArrowRight aria-hidden="true" size={20} />
         </Button>

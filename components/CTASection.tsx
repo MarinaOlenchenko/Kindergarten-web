@@ -7,7 +7,7 @@ export default function CTASection() {
     <section className="relative overflow-hidden bg-[#F6B51E] py-12">
       <div className="mx-auto grid max-w-[1200px] items-center gap-8 px-6 lg:grid-cols-[180px_1fr_auto] lg:px-8">
         <div className="relative h-36 w-36 overflow-hidden rounded-full border-8 border-white/80 shadow-[0_10px_30px_rgba(0,0,0,0.12)]">
-          <Image src="/images/painting.jpg" alt="Bunte Kinderhände" fill className="object-cover" sizes="144px" />
+          <Image src="/Kindergarten-web/images/painting.jpg" alt="Bunte Kinderhände" fill className="object-cover" sizes="144px" />
         </div>
         <div>
           <Send aria-hidden="true" className="mb-3 text-white" size={28} />

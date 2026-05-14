@@ -41,7 +41,7 @@ export default function Hero() {
         <div className="relative">
           <div className="image-mask relative aspect-[1.24/1] overflow-hidden bg-[#EDF7EC] shadow-[0_24px_70px_rgba(63,123,67,0.18)]">
             <Image
-              src="/images/hero-kindergarten.jpg"
+              src="/Kindergarten-web/images/hero-kindergarten.jpg"
               alt="Kinder spielen im Garten der Kita"
               fill
               priority

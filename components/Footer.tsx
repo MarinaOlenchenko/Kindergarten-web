@@ -46,7 +46,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="relative hidden min-h-[170px] overflow-hidden rounded-[40px] lg:block">
-          <Image src="/images/toys.jpg" alt="Holzspielzeug in der Kita" fill className="object-cover" sizes="220px" />
+          <Image src="/Kindergarten-web/images/toys.jpg" alt="Holzspielzeug in der Kita" fill className="object-cover" sizes="220px" />
         </div>
       </div>
       <div className="border-t border-white/12 py-5 text-center text-sm text-white/70">© 2026 Kita SonnenNest. Alle Rechte vorbehalten.</div>
