@@ -13,12 +13,12 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-[#263238]/10 bg-white/90 backdrop-blur-xl">
-      <div className="mx-auto flex h-24 max-w-[1200px] items-center justify-between px-6 lg:px-8">
-        <Link href="/" onClick={() => setOpen(false)} className="flex items-center gap-3">
-          <span className="flex h-14 w-14 items-center justify-center rounded-full bg-[#F6B51E]/20 text-[#F6B51E]">
-            <Sun aria-hidden="true" size={36} strokeWidth={2.5} />
+      <div className="mx-auto flex h-24 max-w-[1200px] items-center justify-between px-6 max-sm:h-[88px] max-sm:px-5 lg:px-8">
+        <Link href="/" onClick={() => setOpen(false)} className="flex max-w-[180px] items-center gap-3">
+          <span className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-[#F6B51E]/20 text-[#F6B51E] max-sm:h-12 max-sm:w-12">
+            <Sun aria-hidden="true" className="max-sm:h-8 max-sm:w-8" size={36} strokeWidth={2.5} />
           </span>
-          <span className="display-font text-2xl font-semibold leading-none">
+          <span className="display-font text-2xl font-semibold leading-none max-sm:text-xl">
             <span className="block text-[#3F7B43]">Kita</span>
             <span className="block text-[#F05A28]">SonnenNest</span>
           </span>
@@ -51,7 +51,7 @@ export default function Header() {
         <button
           type="button"
           onClick={() => setOpen((value) => !value)}
-          className="inline-flex min-h-12 min-w-12 items-center justify-center rounded-full border border-[#263238]/15 bg-white lg:hidden"
+          className="inline-flex h-14 w-14 items-center justify-center rounded-full border border-[#263238]/15 bg-white lg:hidden"
           aria-label={open ? "Menü schließen" : "Menü öffnen"}
           aria-expanded={open}
         >

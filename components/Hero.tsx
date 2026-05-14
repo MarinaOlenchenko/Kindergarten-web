@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { ArrowRight, CalendarDays, Heart, Leaf, UsersRound, Utensils } from "lucide-react";
 import Button from "@/components/Button";
 import OrganicBlob from "@/components/OrganicBlob";
@@ -11,10 +12,10 @@ const benefits = [
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden py-16 lg:py-20">
+    <section className="relative overflow-hidden py-16 max-sm:pt-8 max-sm:pb-0 lg:py-20">
       <OrganicBlob className="-left-20 top-0 h-44 w-44" color="bg-[#6FAF7A]/25" />
       <OrganicBlob className="-right-16 bottom-0 h-52 w-52" color="bg-[#F6B51E]/35" />
-      <div className="mx-auto grid max-w-[1200px] items-center gap-12 px-6 lg:grid-cols-[0.86fr_1.14fr] lg:px-8">
+      <div className="mx-auto grid max-w-[1200px] items-center gap-12 px-6 max-sm:gap-7 max-sm:px-5 lg:grid-cols-[0.86fr_1.14fr] lg:px-8">
         <div className="relative z-10">
           <div className="mb-7 inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 text-sm font-bold shadow-[0_10px_30px_rgba(0,0,0,0.06)]">
             <span className="flex h-8 w-8 items-center justify-center rounded-full bg-[#F26F5B]/18 text-[#F26F5B]">
@@ -28,18 +29,18 @@ export default function Hero() {
           <p className="mt-7 max-w-xl text-lg leading-8 text-[#263238]/75">
             Unsere Kita begleitet Kinder im Alter von 1 bis 6 Jahren mit Wärme, Struktur und viel Raum für Neugier.
           </p>
-          <div className="mt-9 flex flex-col gap-4 sm:flex-row">
-            <Button href="/anmeldung">
+          <div className="mt-9 flex flex-col gap-4 max-sm:gap-[14px] sm:flex-row">
+            <Button href="/anmeldung" className="max-sm:mx-auto max-sm:h-[52px] max-sm:w-full max-sm:max-w-[320px] max-sm:px-6 max-sm:py-0 max-sm:text-base">
               Platz anfragen <ArrowRight aria-hidden="true" size={20} />
             </Button>
-            <Button href="/paedagogik" variant="secondary">
+            <Button href="/paedagogik" variant="secondary" className="max-sm:mx-auto max-sm:h-[52px] max-sm:w-full max-sm:max-w-[320px] max-sm:px-6 max-sm:py-0 max-sm:text-base">
               Konzept ansehen <ArrowRight aria-hidden="true" size={20} />
             </Button>
           </div>
         </div>
 
-        <div className="relative">
-          <div className="image-mask relative aspect-[1.24/1] overflow-hidden bg-[#EDF7EC] shadow-[0_24px_70px_rgba(63,123,67,0.18)]">
+        <div className="relative max-sm:mt-1">
+          <div className="image-mask relative aspect-[1.24/1] overflow-hidden bg-[#EDF7EC] shadow-[0_24px_70px_rgba(63,123,67,0.18)] max-sm:h-[280px] max-sm:w-full max-sm:rounded-[40px]">
             <Image
               src="/Kindergarten-web/images/hero-kindergarten.jpg"
               alt="Kinder spielen im Garten der Kita"
@@ -49,28 +50,28 @@ export default function Hero() {
               sizes="(min-width: 1024px) 58vw, 100vw"
             />
           </div>
-          <div className="absolute -bottom-8 right-4 max-w-[300px] rounded-[28px] bg-white p-6 shadow-[0_20px_55px_rgba(0,0,0,0.12)] sm:right-8">
+          <div className="absolute -bottom-8 right-4 max-w-[300px] rounded-[28px] bg-white p-6 shadow-[0_20px_55px_rgba(0,0,0,0.12)] max-sm:relative max-sm:right-auto max-sm:mx-auto max-sm:mt-[-72px] max-sm:w-[calc(100%_-_32px)] max-sm:max-w-[320px] max-sm:p-6 sm:right-8">
             <div className="flex items-start gap-4">
-              <span className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-[#F6B51E] text-[#263238]">
-                <CalendarDays aria-hidden="true" size={26} />
+              <span className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-[#F6B51E] text-[#263238] max-sm:h-14 max-sm:w-14">
+                <CalendarDays aria-hidden="true" className="max-sm:h-7 max-sm:w-7" size={26} />
               </span>
               <div>
-                <h2 className="display-font text-2xl font-semibold leading-tight">Freie Plätze ab September</h2>
-                <Button href="/anmeldung" variant="secondary" className="mt-4 border-0 px-0 py-0 text-[#3F7B43] shadow-none hover:bg-transparent">
+                <h2 className="display-font text-2xl font-semibold leading-tight max-sm:text-[28px]">Freie Plätze ab September</h2>
+                <Link href="/anmeldung" className="mt-4 inline-flex items-center gap-2 font-semibold leading-6 text-[#3F7B43] transition hover:translate-x-0.5 max-sm:text-lg">
                   Jetzt unverbindlich anfragen <ArrowRight aria-hidden="true" size={18} />
-                </Button>
+                </Link>
               </div>
             </div>
           </div>
         </div>
 
-        <div className="grid gap-5 md:grid-cols-3 lg:col-span-2">
+        <div className="grid gap-5 max-sm:mt-11 max-sm:grid-cols-1 max-sm:gap-5 max-sm:pb-8 md:grid-cols-3 lg:col-span-2">
           {benefits.map((item) => {
             const Icon = item.icon;
             return (
               <div key={item.title} className="flex items-center gap-4">
-                <span className={`flex h-14 w-14 shrink-0 items-center justify-center rounded-full text-white ${item.color}`}>
-                  <Icon aria-hidden="true" size={25} />
+                <span className={`flex h-14 w-14 shrink-0 items-center justify-center rounded-full text-white max-sm:h-16 max-sm:w-16 ${item.color}`}>
+                  <Icon aria-hidden="true" className="max-sm:h-8 max-sm:w-8" size={25} />
                 </span>
                 <div>
                   <h3 className="font-extrabold">{item.title}</h3>
