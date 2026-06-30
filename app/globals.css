@@ -57,24 +57,24 @@ a {
   display: inline-flex;
 }
 
-@media (min-width: 1800px) {
+@media (min-width: 1280px) {
   .site-header__inner {
     height: 6rem;
     gap: 1.25rem;
   }
 
   .site-header__logo-icon {
-    width: 3.5rem;
-    height: 3.5rem;
+    width: 3rem;
+    height: 3rem;
   }
 
   .site-header__logo-sun {
-    width: 2.25rem;
-    height: 2.25rem;
+    width: 2rem;
+    height: 2rem;
   }
 
   .site-header__logo-text {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
   }
 
   .site-header__nav {
@@ -88,6 +88,22 @@ a {
   .site-header__menu,
   .site-header__mobile {
     display: none;
+  }
+}
+
+@media (min-width: 1500px) {
+  .site-header__logo-icon {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+
+  .site-header__logo-sun {
+    width: 2.25rem;
+    height: 2.25rem;
+  }
+
+  .site-header__logo-text {
+    font-size: 1.5rem;
   }
 }
 
