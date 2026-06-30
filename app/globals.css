@@ -48,6 +48,49 @@ a {
   border-radius: 38% 62% 40% 60% / 55% 42% 58% 45%;
 }
 
+.site-header__nav,
+.site-header__cta {
+  display: none;
+}
+
+.site-header__menu {
+  display: inline-flex;
+}
+
+@media (min-width: 1800px) {
+  .site-header__inner {
+    height: 6rem;
+    gap: 1.25rem;
+  }
+
+  .site-header__logo-icon {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+
+  .site-header__logo-sun {
+    width: 2.25rem;
+    height: 2.25rem;
+  }
+
+  .site-header__logo-text {
+    font-size: 1.5rem;
+  }
+
+  .site-header__nav {
+    display: flex;
+  }
+
+  .site-header__cta {
+    display: block;
+  }
+
+  .site-header__menu,
+  .site-header__mobile {
+    display: none;
+  }
+}
+
 .paper-texture {
   background-image:
     radial-gradient(circle at 18% 12%, rgba(111, 175, 122, 0.08), transparent 26%),

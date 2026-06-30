@@ -13,18 +13,18 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-[#263238]/10 bg-white/90 backdrop-blur-xl">
-      <div className="mx-auto flex h-[88px] max-w-[1280px] items-center gap-4 px-5 sm:px-6 lg:px-8 min-[1800px]:h-24 min-[1800px]:gap-5">
-        <Link href="/" onClick={() => setOpen(false)} className="flex shrink-0 items-center gap-3">
-          <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-[#F6B51E]/20 text-[#F6B51E] min-[1800px]:h-14 min-[1800px]:w-14">
-            <Sun aria-hidden="true" className="h-8 w-8 min-[1800px]:h-9 min-[1800px]:w-9" strokeWidth={2.5} />
+      <div className="site-header__inner mx-auto flex h-[88px] max-w-[1280px] items-center gap-4 px-5 sm:px-6 lg:px-8">
+        <Link href="/" onClick={() => setOpen(false)} className="site-header__logo flex shrink-0 items-center gap-3">
+          <span className="site-header__logo-icon flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-[#F6B51E]/20 text-[#F6B51E]">
+            <Sun aria-hidden="true" className="site-header__logo-sun h-8 w-8" strokeWidth={2.5} />
           </span>
-          <span className="display-font whitespace-nowrap text-xl font-semibold leading-none min-[1800px]:text-2xl">
+          <span className="site-header__logo-text display-font whitespace-nowrap text-xl font-semibold leading-none">
             <span className="block text-[#3F7B43]">Kita</span>
             <span className="block text-[#F05A28]">SonnenNest</span>
           </span>
         </Link>
 
-        <nav className="hidden min-w-0 flex-1 flex-wrap items-center justify-center gap-x-4 gap-y-2 min-[1800px]:flex" aria-label="Hauptnavigation">
+        <nav className="site-header__nav hidden min-w-0 flex-1 flex-wrap items-center justify-center gap-x-4 gap-y-2" aria-label="Hauptnavigation">
           {navigation.map((item) => {
             const active = pathname === item.href;
             return (
@@ -41,7 +41,7 @@ export default function Header() {
           })}
         </nav>
 
-        <div className="hidden shrink-0 min-[1800px]:block">
+        <div className="site-header__cta hidden shrink-0">
           <Button href="/kontakt" className="whitespace-nowrap !px-5 !py-3 text-[13px]">
             <CalendarDays aria-hidden="true" size={18} />
             Besichtigung vereinbaren
@@ -51,7 +51,7 @@ export default function Header() {
         <button
           type="button"
           onClick={() => setOpen((value) => !value)}
-          className="ml-auto inline-flex h-14 w-14 shrink-0 items-center justify-center rounded-full border border-[#263238]/15 bg-white min-[1800px]:hidden"
+          className="site-header__menu ml-auto inline-flex h-14 w-14 shrink-0 items-center justify-center rounded-full border border-[#263238]/15 bg-white"
           aria-label={open ? "Menü schließen" : "Menü öffnen"}
           aria-expanded={open}
         >
@@ -60,7 +60,7 @@ export default function Header() {
       </div>
 
       {open ? (
-        <div className="border-t border-[#263238]/10 bg-white px-6 py-6 min-[1800px]:hidden">
+        <div className="site-header__mobile border-t border-[#263238]/10 bg-white px-6 py-6">
           <nav className="mx-auto flex max-w-[1280px] flex-col gap-2" aria-label="Mobile Navigation">
             {navigation.map((item) => (
               <Link
