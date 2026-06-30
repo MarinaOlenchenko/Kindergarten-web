@@ -13,25 +13,25 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-[#263238]/10 bg-white/90 backdrop-blur-xl">
-      <div className="mx-auto flex h-24 max-w-[1200px] items-center justify-between px-6 max-sm:h-[88px] max-sm:px-5 lg:px-8">
-        <Link href="/" onClick={() => setOpen(false)} className="flex max-w-[180px] items-center gap-3">
-          <span className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-[#F6B51E]/20 text-[#F6B51E] max-sm:h-12 max-sm:w-12">
-            <Sun aria-hidden="true" className="max-sm:h-8 max-sm:w-8" size={36} strokeWidth={2.5} />
+      <div className="mx-auto flex h-[88px] max-w-[1280px] items-center gap-4 px-5 sm:px-6 lg:px-8 2xl:h-24 2xl:gap-5">
+        <Link href="/" onClick={() => setOpen(false)} className="flex shrink-0 items-center gap-3">
+          <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-[#F6B51E]/20 text-[#F6B51E] 2xl:h-14 2xl:w-14">
+            <Sun aria-hidden="true" className="h-8 w-8 2xl:h-9 2xl:w-9" strokeWidth={2.5} />
           </span>
-          <span className="display-font text-2xl font-semibold leading-none max-sm:text-xl">
+          <span className="display-font whitespace-nowrap text-xl font-semibold leading-none 2xl:text-2xl">
             <span className="block text-[#3F7B43]">Kita</span>
             <span className="block text-[#F05A28]">SonnenNest</span>
           </span>
         </Link>
 
-        <nav className="hidden items-center gap-8 lg:flex" aria-label="Hauptnavigation">
+        <nav className="hidden min-w-0 flex-1 flex-wrap items-center justify-center gap-x-3 gap-y-2 2xl:flex" aria-label="Hauptnavigation">
           {navigation.map((item) => {
             const active = pathname === item.href;
             return (
               <Link
                 key={item.href}
                 href={item.href}
-                className={`rounded-full px-1 py-2 text-sm font-bold transition ${
+                className={`whitespace-nowrap rounded-full px-1 py-2 text-[13px] font-bold leading-none transition ${
                   active ? "text-[#3F7B43]" : "text-[#263238] hover:text-[#3F7B43]"
                 }`}
               >
@@ -41,8 +41,8 @@ export default function Header() {
           })}
         </nav>
 
-        <div className="hidden lg:block">
-          <Button href="/kontakt" className="px-6 py-3">
+        <div className="hidden shrink-0 2xl:block">
+          <Button href="/kontakt" className="whitespace-nowrap !px-5 !py-3 text-[13px]">
             <CalendarDays aria-hidden="true" size={18} />
             Besichtigung vereinbaren
           </Button>
@@ -51,7 +51,7 @@ export default function Header() {
         <button
           type="button"
           onClick={() => setOpen((value) => !value)}
-          className="inline-flex h-14 w-14 items-center justify-center rounded-full border border-[#263238]/15 bg-white lg:hidden"
+          className="ml-auto inline-flex h-14 w-14 shrink-0 items-center justify-center rounded-full border border-[#263238]/15 bg-white 2xl:hidden"
           aria-label={open ? "Menü schließen" : "Menü öffnen"}
           aria-expanded={open}
         >
@@ -60,8 +60,8 @@ export default function Header() {
       </div>
 
       {open ? (
-        <div className="border-t border-[#263238]/10 bg-white px-6 py-6 lg:hidden">
-          <nav className="mx-auto flex max-w-[1200px] flex-col gap-2" aria-label="Mobile Navigation">
+        <div className="border-t border-[#263238]/10 bg-white px-6 py-6 2xl:hidden">
+          <nav className="mx-auto flex max-w-[1280px] flex-col gap-2" aria-label="Mobile Navigation">
             {navigation.map((item) => (
               <Link
                 key={item.href}
