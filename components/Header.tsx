@@ -24,7 +24,7 @@ export default function Header() {
           </span>
         </Link>
 
-        <nav className="site-header__nav hidden min-w-0 flex-1 flex-wrap items-center justify-center gap-x-4 gap-y-2" aria-label="Hauptnavigation">
+        <nav className="site-header__nav flex min-w-0 flex-1 flex-wrap items-center justify-center gap-x-4 gap-y-2" aria-label="Hauptnavigation">
           {navigation.map((item) => {
             const active = pathname === item.href;
             return (
@@ -41,7 +41,7 @@ export default function Header() {
           })}
         </nav>
 
-        <div className="site-header__cta hidden shrink-0">
+        <div className="site-header__cta shrink-0">
           <Button href="/kontakt" className="whitespace-nowrap !px-5 !py-3 text-[13px]">
             <CalendarDays aria-hidden="true" size={18} />
             Besichtigung vereinbaren
@@ -51,7 +51,7 @@ export default function Header() {
         <button
           type="button"
           onClick={() => setOpen((value) => !value)}
-          className="site-header__menu ml-auto inline-flex h-14 w-14 shrink-0 items-center justify-center rounded-full border border-[#263238]/15 bg-white"
+          className="site-header__menu ml-auto h-14 w-14 shrink-0 items-center justify-center rounded-full border border-[#263238]/15 bg-white"
           aria-label={open ? "Menü schließen" : "Menü öffnen"}
           aria-expanded={open}
         >
