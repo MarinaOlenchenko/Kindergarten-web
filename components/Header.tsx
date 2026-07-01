@@ -24,14 +24,14 @@ export default function Header() {
           </span>
         </Link>
 
-        <nav className="site-header__nav flex min-w-0 flex-1 flex-wrap items-center justify-center gap-x-4 gap-y-2" aria-label="Hauptnavigation">
+        <nav className="site-header__nav flex min-w-0 flex-1 flex-wrap items-center justify-center gap-x-3 gap-y-2" aria-label="Hauptnavigation">
           {navigation.map((item) => {
             const active = pathname === item.href;
             return (
               <Link
                 key={item.href}
                 href={item.href}
-                className={`whitespace-nowrap rounded-full px-1 py-2 text-[13px] font-bold leading-none transition ${
+                className={`site-header__nav-link whitespace-nowrap rounded-full px-1 py-2 text-[13px] font-bold leading-none transition ${
                   active ? "text-[#3F7B43]" : "text-[#263238] hover:text-[#3F7B43]"
                 }`}
               >
@@ -42,7 +42,7 @@ export default function Header() {
         </nav>
 
         <div className="site-header__cta shrink-0">
-          <Button href="/kontakt" className="whitespace-nowrap !px-5 !py-3 text-[13px]">
+          <Button href="/kontakt" className="site-header__cta-button whitespace-nowrap !px-4 !py-3 text-[13px]">
             <CalendarDays aria-hidden="true" size={18} />
             Besichtigung vereinbaren
           </Button>
